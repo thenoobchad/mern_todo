@@ -6,6 +6,10 @@ export async function getTodo(req, res, next) {
     
 }
 
+export async function createTodo(req, res, next) {
+    
+}
+
 export async function updateTodo(req, res, next) {
     
 }
