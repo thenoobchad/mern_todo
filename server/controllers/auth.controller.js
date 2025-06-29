@@ -51,5 +51,8 @@ const isPasswordCorrect = await bcrypt.compare(req.body.password, user.password)
 }
 
 export async function logout(req, res, next) {
-    res.send("new logout route")
+    res.clearCookie("access_token", {
+        httpOnly: true,
+        secure: process.env.NODE_ENV === "production"
+    }).status(200).json({message: "Logged out successfully."})
 }
