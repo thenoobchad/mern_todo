@@ -41,6 +41,12 @@
   --color-sidebar-ring: var(--sidebar-ring);
 }
 
+@font-face {
+  font-family: "Regular";
+  src: local("Poppins-Regular"), url("../fonts/Geist-Regular.ttf")
+}
+
+
 :root {
   --radius: 0.65rem;
   --background: oklch(1 0 0);
@@ -108,4 +114,24 @@
   --sidebar-accent-foreground: oklch(0.985 0 0);
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.541 0.281 293.009);
+}
+
+body {
+  @apply bg-background text-foreground font-normal 
+}
+
+body {
+  font-family: Regular;
+}
+
+.message {
+  @apply text-left w-full p-4 text-sm text-white bg-[#f74850]
+}
+
+.successMsg {
+  @apply bg-[#5cb85c]
+}
+
+.iconHover {
+  @apply fill-slate-300 transition ease-in-out hover:cursor-pointer hover:fill-primary;
 }
